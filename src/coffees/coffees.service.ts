@@ -35,7 +35,7 @@ export class CoffeesService {
   }
 
   async findOne(id: number) {
-    const coffee = this.coffeeRepository.findOne({
+    const coffee = await this.coffeeRepository.findOne({
       where: { id },
       relations: {
         flavors: true,
