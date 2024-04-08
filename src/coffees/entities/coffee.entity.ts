@@ -20,7 +20,7 @@ export class Coffee {
   @Column()
   brand: string;
 
-  @Column()
+  @Column({ default: 0 })
   recommendations: number;
 
   @JoinTable()

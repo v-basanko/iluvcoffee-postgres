@@ -13,6 +13,18 @@ services:
     volumes:
       - /home/postgresql:/var/lib/postgresql/data
 
+  test-db:
+    image: postgres:latest
+    container_name: test_iluvcoffee_postgres
+    environment:
+      PGDATA: /var/postgresql/data
+      POSTGRES_PASSWORD: 123456
+    ports:
+      - "5433:5432"
+    restart: always
+    volumes:
+      - /home/postgresql:/var/lib/postgresql/data
+
   pgadmin:
     image: dpage/pgadmin4
     container_name: iluvcoffee_pgadmin

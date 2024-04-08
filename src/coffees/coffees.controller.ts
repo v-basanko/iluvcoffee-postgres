@@ -18,7 +18,7 @@ import { Coffee } from './entities/coffee.entity';
 import { PaginationQueryDto } from '../common/dto/pagination-query.dto';
 import { Public } from '../common/decorators/public.decorator';
 import { ParseIntPipe } from '../common/pipes/parse-int/parse-int.pipe';
-import { Protocol } from '../common/decorators/protocol.decorator';
+//import { Protocol } from '../common/decorators/protocol.decorator';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
 
 @ApiTags('coffees')
@@ -34,10 +34,10 @@ export class CoffeesController {
   @Public()
   @Get()
   async findAll(
-    @Protocol('https') protocol: string,
+    //@Protocol('https') protocol: string,
     @Query() paginationQuery: PaginationQueryDto,
   ): Promise<Coffee[]> {
-    console.log(protocol);
+    //console.log(protocol);
     return this.coffeesService.findAll(paginationQuery);
   }
 

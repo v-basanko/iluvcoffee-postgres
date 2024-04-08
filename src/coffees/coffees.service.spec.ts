@@ -44,8 +44,8 @@ describe('CoffeesService', () => {
   });
 
   describe('findOne', () => {
-    describe('when coffee with ID exists', () => {
-      it('should return the coffee object', async () => {
+    describe('when coffees with ID exists', () => {
+      it('should return the coffees object', async () => {
         const coffeeId = 1;
         const expectedCoffee = {};
 
