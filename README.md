@@ -24,7 +24,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+The iluvcoffee-postgres project demonstrates the basic capabilities of NestJS with Typeorm.
 
 ## Installation
 
